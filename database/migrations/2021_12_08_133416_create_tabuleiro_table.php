@@ -19,8 +19,6 @@ class CreateTabuleiroTable extends Migration
             $table->string('name');
             $table->integer('altura');
             $table->integer('largura');
-            
-    
         });
     }
 
