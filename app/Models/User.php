@@ -19,6 +19,7 @@ class User extends Authenticatable
     use TwoFactorAuthenticatable;
 
     /**
+     * joao viadao e ze da o butao
      * The attributes that are mass assignable.
      *
      * @var string[]
