@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateActionsTable extends Migration
+class CreateTypePiecesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateActionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('actions', function (Blueprint $table) {
+        Schema::create('type_pieces', function (Blueprint $table)
+        {
             $table->id();
-            $table->string('direction');
-            $table->integer('steps_number');
-            $table->string('next_direction');
-            $table->string('type');
             $table->timestamps();
+            $table->string('name');
         });
     }
 
@@ -30,6 +28,6 @@ class CreateActionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actions');
+        Schema::dropIfExists('type_pieces');
     }
 }

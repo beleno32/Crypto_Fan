@@ -3,9 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use League\CommonMark\Reference\Reference;
 
-class CreatePieceActionTable extends Migration
+class CreateActionTypePiecesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +13,10 @@ class CreatePieceActionTable extends Migration
      */
     public function up()
     {
-        Schema::create('pieces_actions', function (Blueprint $table) {
+        Schema::create('action_type_pieces', function (Blueprint $table)
+        {
             $table->unsignedBigInteger('piece_id');
-            $table->foreign('piece_id')->references('id')->on('pieces');
+            $table->foreign('piece_id')->references('id')->on('type_pieces');
             $table->unsignedBigInteger('action_id');
             $table->foreign('action_id')->references('id')->on('actions');
             $table->timestamps();
@@ -30,6 +30,6 @@ class CreatePieceActionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('piece_action');
+        Schema::dropIfExists('action_type_pieces');
     }
 }

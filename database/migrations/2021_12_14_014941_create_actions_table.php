@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePieceTable extends Migration
+class CreateActionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreatePieceTable extends Migration
      */
     public function up()
     {
-        Schema::create('pieces', function (Blueprint $table) {
+        Schema::create('actions', function (Blueprint $table)
+        {
             $table->id();
+            $table->string('direction');
+            $table->integer('steps_number');
+            $table->json('next_action');
+            $table->string('type');
             $table->timestamps();
-            $table->string('name');
         });
     }
 
@@ -27,6 +31,6 @@ class CreatePieceTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('piece');
+        Schema::dropIfExists('actions');
     }
 }
