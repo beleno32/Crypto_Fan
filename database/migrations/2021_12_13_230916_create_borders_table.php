@@ -17,8 +17,8 @@ class CreateBordersTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->integer('altura');
-            $table->integer('largura');
+            $table->integer('height');
+            $table->integer('width');
         });
     
     }
