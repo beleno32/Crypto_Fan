@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Games;
 use Illuminate\Database\Seeder;
 
 class GamesSeeder extends Seeder
@@ -12,7 +13,10 @@ class GamesSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        //
+    {       
+        Games::Create([
+            'name' => 'Damas',
+            'border_id' => 1,    
+        ]);
     }
 }

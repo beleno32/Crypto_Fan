@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Border;
 use Illuminate\Database\Seeder;
 
 class BorderSeeder extends Seeder
@@ -12,7 +13,14 @@ class BorderSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        //
+    { 
+        Border::Create([
+            'name' => 'Damas',
+            'height' => 8,    
+            'width' => 8,
+        ]);
+    
+
+            
     }
 }
