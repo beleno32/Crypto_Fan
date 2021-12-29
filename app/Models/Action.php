@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Action extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'direction', 'steps_number', 'next_action', 'type'
+    ];
 }
