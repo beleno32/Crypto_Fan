@@ -8,6 +8,7 @@ use Illuminate\Database\Seeder;
 class GamesSeeder extends Seeder
 {
     /**
+     * tst2
      * Run the database seeds.
      *
      * @return void
