@@ -9,6 +9,7 @@ class GamesSeeder extends Seeder
 {
     /**
      * tst2
+     * tst
      * Run the database seeds.
      *
      * @return void
