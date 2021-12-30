@@ -2,23 +2,20 @@
 
 namespace Database\Seeders;
 
-use App\Models\Games;
+use App\Models\TypePiece;
 use Illuminate\Database\Seeder;
 
-class GamesSeeder extends Seeder
+class TypePieceTableSeeder extends Seeder
 {
     /**
-     * tst2
-     * tst
      * Run the database seeds.
      *
      * @return void
      */
     public function run()
-    {       
-        Games::Create([
-            'name' => 'Damas',
-            'border_id' => 1,    
+    {
+        TypePiece::create([
+            'name'=>'dama'
         ]);
     }
 }
