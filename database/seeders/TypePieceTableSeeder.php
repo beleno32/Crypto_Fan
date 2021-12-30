@@ -15,7 +15,11 @@ class TypePieceTableSeeder extends Seeder
     public function run()
     {
         TypePiece::create([
-            'name'=>'dama'
+            'name'=>'dama_preta'
+            
+        ]);
+        TypePiece::create([
+            'name'=>'dama_branca'
         ]);
     }
 }
