@@ -9,9 +9,11 @@ class DatabaseSeeder extends Seeder
 
 public function run()
     {
-     $this->call([ 
-         BorderSeeder::class,
-         GamesSeeder::class,
+        // \App\Models\User::factory(10)->create();
+        $this->call([
+            TypePieceTableSeeder::class,
+            BorderSeeder::class,
+            GamesSeeder::class,
      ]);
     }
 }
