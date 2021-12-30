@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Games extends Model
 {
-    use HasFactory;
+    /**
+     * Get the phone associated with the user.
+     */
+    public function border()
+    {
+        return $this->hasOne(Border::class);
+    }
 }
