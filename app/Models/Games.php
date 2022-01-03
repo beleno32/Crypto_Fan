@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Border;
 
 class Games extends Model
 {
@@ -12,6 +13,6 @@ class Games extends Model
      */
     public function border()
     {
-        return $this->hasOne(Border::class);
+        return $this->belongsTo(Border::class);
     }
 }
