@@ -27,8 +27,9 @@ class GamesController extends Controller
             ];
             array_push($allPieces,$piecesData);
         }
+
         return view('games.tabuleiro.boardgames')->with('games', $gameInfo)
-        ->with('pieces', $allPieces);
+        ->with('allPieces'," ".json_encode($allPieces));
 
     }
 
