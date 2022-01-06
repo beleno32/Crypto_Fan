@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GamesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/tabuleiro', function () {
     return view('games.tabuleiro.boardgames');
 });
+
+Route::get('games/{id_game}', [GamesController::class, 'gamestart']);
