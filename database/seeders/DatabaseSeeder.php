@@ -14,7 +14,7 @@ public function run()
             TypePieceTableSeeder::class,
             BorderSeeder::class,
             GamesSeeder::class,
-            GameTypePieces::class,
+            GameTypePiecesSeeder::class,
      ]);
     }
 }
