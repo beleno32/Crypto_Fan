@@ -16,7 +16,21 @@ class GamesController extends Controller
                    'height'=> $games->border->height,
                    'width'=> $games->border->width,];
         $games->gametypepiece;
-        return view('games.tabuleiro.boardgames')->with('games', $gameInfo);
+
+        $gameTypePieces=   $games->gameTypePieces;
+        $allPieces=[];
+        foreach ($gameTypePieces as $gameTypePiece)
+        {
+            $piecesData=(Object)[
+                'x'=>$gameTypePiece->pos_axis_x,
+                'y'=>$gameTypePiece->pos_axis_y,
+                'image'=>$gameTypePiece->typePiece->image
+            ];
+            array_push($allPieces,$piecesData);
+        }
+
+        return view('games.tabuleiro.boardgames')->with('games', $gameInfo)
+        ->with('allPieces'," ".json_encode($allPieces));
 
     }
 
