@@ -15,4 +15,8 @@ class Games extends Model
     {
         return $this->belongsTo(Border::class);
     }
+    public function type_piece()
+    {
+        return $this->hasMany(TypePiece::class);
+    }
 }

@@ -21,5 +21,9 @@ class TypePiece extends Model
     {
         return $this->belongsToMany(Action::class)->using(TypePiece::class);
     }
+    public function games()
+    {
+        return $this->belongsTo(Games::class);
+    }
 }
 
