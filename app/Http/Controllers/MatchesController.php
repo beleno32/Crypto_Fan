@@ -11,9 +11,11 @@ class MatchesController extends Controller
 {
     static public function matchStart($id_game,$player_1,$player_2)
     {
-        Matches::Create([
-            'id_game'=> $id_game,
-            'id_player_1' => $player_1,
-            'id_player_2' => $player_2]);
+        $match=new Matches();
+        $match->id_game=$id_game;
+        $match->id_player_1=$player_1;
+        $match->id_player_2=$player_2;
+        $match->save();
+        return $match;
     }
 }

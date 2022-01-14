@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Games;
 use App\Models\Matches;
+use App\Models\Piece;
 use Illuminate\Http\Request;
 
 class GamesController extends Controller
@@ -11,7 +12,7 @@ class GamesController extends Controller
 
     public function gameStart($id_game)
     { 
-        MatchesController::matchStart(1,1,2);
+        $match=MatchesController::matchStart(1,1,2);
         $games=Games::find($id_game);
         $gameInfo= ['name'=> $games->names,
                    'height'=> $games->border->height,
@@ -25,9 +26,15 @@ class GamesController extends Controller
             $piecesData=(Object)[
                 'x'=>$gameTypePiece->pos_axis_x,
                 'y'=>$gameTypePiece->pos_axis_y,
-                'image'=>$gameTypePiece->typePiece->image
-            ];
+                'image'=>$gameTypePiece->typePiece->image];
             array_push($allPieces,$piecesData);
+
+        $piece= new Piece();
+        $piece->id_matches=$match->id;
+        $piece->pos_axis_x=$gameTypePiece->pos_axis_x;
+        $piece->pos_axis_y=$gameTypePiece->pos_axis_y;
+        $piece->id_type_pieces=$gameTypePiece->type_piece_id;
+        $piece->save();
         }
 
         return view('games.tabuleiro.boardgames')->with('games', $gameInfo)

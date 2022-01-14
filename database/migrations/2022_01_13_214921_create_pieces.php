@@ -17,6 +17,8 @@ class CreatePieces extends Migration
             $table->id();
             $table->unsignedBigInteger('id_matches');
             $table->foreign('id_matches')->references('id')->on('matches');
+            $table->unsignedBigInteger('id_type_pieces');
+            $table->foreign('id_type_pieces')->references('id')->on('type_pice');
             $table->string('pos_axis_x');
             $table->string('pos_axis_y');
             $table->timestamps();
