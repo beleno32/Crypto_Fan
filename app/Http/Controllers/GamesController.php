@@ -14,8 +14,9 @@ class GamesController extends Controller
         MatchesController::matchStart(1,1,2);
         $games=Games::find($id_game);
         $gameInfo= ['name'=> $games->names,
-                   'height'=> $games->border->height,  
+                   'height'=> $games->border->height,
                    'width'=> $games->border->width,];
+        $games->gametypepiece;
 
         $gameTypePieces=   $games->gameTypePieces;
         $allPieces=[];
@@ -24,7 +25,7 @@ class GamesController extends Controller
             $piecesData=(Object)[
                 'x'=>$gameTypePiece->pos_axis_x,
                 'y'=>$gameTypePiece->pos_axis_y,
-                'image'=>$gameTypePiece->typePiece->image 
+                'image'=>$gameTypePiece->typePiece->image
             ];
             array_push($allPieces,$piecesData);
         }

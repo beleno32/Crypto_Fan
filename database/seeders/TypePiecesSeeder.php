@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Action;
 use Illuminate\Database\Seeder;
 
-class ActionTableSeeder extends Seeder
+class TypePiecesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,5 +13,6 @@ class ActionTableSeeder extends Seeder
      */
     public function run()
     {
+        //
     }
 }

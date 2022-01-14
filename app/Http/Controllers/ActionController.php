@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Action;
+use App\Models\ActionTypePiece;
 use Illuminate\Http\Request;
 
 class ActionController extends Controller
@@ -81,5 +82,10 @@ class ActionController extends Controller
     public function destroy(Action $action)
     {
         //
+    }
+    public function teste()
+    {
+    $buscaaction=Action::find(1);
+    return $buscaaction;
     }
 }
