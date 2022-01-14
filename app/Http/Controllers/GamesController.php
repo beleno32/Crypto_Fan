@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Games;
+use App\Models\Matches;
 use Illuminate\Http\Request;
 
 class GamesController extends Controller
@@ -10,7 +11,7 @@ class GamesController extends Controller
 
     public function gameStart($id_game)
     { 
-
+        MatchesController::matchStart(1,1,2);
         $games=Games::find($id_game);
         $gameInfo= ['name'=> $games->names,
                    'height'=> $games->border->height,  
