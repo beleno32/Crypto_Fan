@@ -15,7 +15,8 @@ public function run()
             BorderSeeder::class,
             GamesSeeder::class,
             GameTypePiecesSeeder::class,
-            ActionTable::class,
+            ActionSeeder::class,
+            ActionTypePieceTableSeeder::class,
      ]);
     }
 }

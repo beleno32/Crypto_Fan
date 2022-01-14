@@ -15,7 +15,10 @@ class CreatePieces extends Migration
     {
         Schema::create('pieces', function (Blueprint $table) {
             $table->id();
-            $table->foreign('id_match')->references('id')->on('matches');
+            $table->unsignedBigInteger('id_matches');
+            $table->foreign('id_matches')->references('id')->on('matches');
+            $table->string('pos_axis_x');
+            $table->string('pos_axis_y');
             $table->timestamps();
         });
     }

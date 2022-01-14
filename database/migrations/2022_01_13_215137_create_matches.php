@@ -15,9 +15,12 @@ class CreateMatches extends Migration
     {
         Schema::create('matches', function (Blueprint $table) {
             $table->id();
-            $table->id_player_1();
-            $table->id_player_2();
-            $table->game();
+            $table->unsignedBigInteger('id_player_1');
+            $table->foreign('id_player_1')->references('id')->on('users');
+            $table->unsignedBigInteger('id_player_2');
+            $table->foreign('id_player_2')->references('id')->on('users');
+            $table->unsignedBigInteger('id_game');
+            $table->foreign('id_game')->references('id')->on('games');
             $table->timestamps();
 
         });
