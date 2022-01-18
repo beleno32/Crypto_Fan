@@ -18,7 +18,7 @@ class CreateActionsTable extends Migration
             $table->id();
             $table->string('direction');
             $table->integer('steps_number');
-            $table->json('next_action');
+            $table->json('next_action')->nullable();
             $table->string('type');
             $table->timestamps();
         });
