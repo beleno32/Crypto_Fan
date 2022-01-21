@@ -37,8 +37,8 @@ class GameTypePiecesSeeder extends Seeder
             ['id' => 20, 'game_id' => 1,'type_piece_id' =>1, 'pos_axis_x' => 'G','pos_axis_y' => 6],
             ['id' => 21, 'game_id' => 1,'type_piece_id' =>2, 'pos_axis_x' => 'G','pos_axis_y' => 2],
             ['id' => 22, 'game_id' => 1,'type_piece_id' =>1, 'pos_axis_x' => 'H','pos_axis_y' => 7],
-            ['id' => 23, 'game_id' => 1,'type_piece_id' =>2, 'pos_axis_x' => 'E','pos_axis_y' => 3],
-            ['id' => 24, 'game_id' => 1,'type_piece_id' =>2, 'pos_axis_x' => 'E','pos_axis_y' => 1],
+            ['id' => 23, 'game_id' => 1,'type_piece_id' =>2, 'pos_axis_x' => 'H','pos_axis_y' => 3],
+            ['id' => 24, 'game_id' => 1,'type_piece_id' =>2, 'pos_axis_x' => 'H','pos_axis_y' => 1],
         ]);
 
         //
