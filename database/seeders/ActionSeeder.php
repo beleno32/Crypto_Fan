@@ -16,7 +16,7 @@ class ActionSeeder extends Seeder
     public function run()
     {
         DB::table('actions')->insertOrIgnore([
-            ['id'=>1, 'direction' => 'Noroeste', 'steps_number'=>1, 'type'=>'mover','is_it_first_action'=>1],
+            ['id'=>1, 'direction' => 'Noroeste','steps_number'=>1, 'type'=>'mover' ,'is_it_first_action'=>1],
             ['id'=>2, 'direction' => 'Nordeste','steps_number'=>1, 'type'=>'mover' ,'is_it_first_action'=>1],
             ['id'=>3,'direction' => 'Sudoeste','steps_number'=>1, 'type'=>'mover'  ,'is_it_first_action'=>1],
             ['id'=>4,'direction' => 'Sudeste','steps_number'=>1, 'type'=>'mover'   ,'is_it_first_action'=>1],
